@@ -40,5 +40,4 @@ def get_golbach(n):
 
     return 0
 def main():
-
-print(get_golbach(13))
+print(is_prime(13))

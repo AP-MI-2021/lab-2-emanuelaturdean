@@ -40,5 +40,5 @@ def get_golbach(n):
 
     return 0
 def main():
-n=13
-print(get_golbach(n))
+
+print(get_golbach(13))

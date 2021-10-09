@@ -35,10 +35,6 @@ def get_golbach(n):
         p1 += 1
     return None
 
-def funct(n):
-    return 1,n
-
-
 def main():
     print(is_prime(25))
     return_value = get_golbach(60)

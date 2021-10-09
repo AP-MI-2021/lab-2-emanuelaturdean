@@ -17,27 +17,39 @@ def is_prime(n):
         for i in range(2, int(n / 2) + 1):
             if (n % i) == 0:
                 return 0
-            return 1
+        return 1
     else:
         return 0
+
 '''
 functia get_golbach(n) returneaza
 '''
 def get_golbach(n):
-    copie=n
-    ok1=0
-    ok2=0
-    for i in range(2,int(n / 2) ):
-        if (is_prime(i) == 1 ):
-            p1=copie
-            copie= copie - i
-            ok1=1
-        if (is_prime(copie) == 1 ):
-            p2=copie
-            ok2=1
-        if( ok1 == 1 and ok2 == 1) :
-            return p1 , p2
+    p1=2
+    while ( p1 < int(n / 2 + 1) ):
+        copie=n
+        if(is_prime(p1) == 1):
+            p2=copie-p1
+            if(is_prime(p2) == 1 ):
+                return p1,p2
+        p1 += 1
+    return None
 
-    return 0
+def funct(n):
+    return 1,n
+
+
 def main():
-print(is_prime(13))
+    print(is_prime(25))
+    return_value = get_golbach(60)
+    if return_value is not None:
+        p1,p2 = return_value
+        print(p1)
+        print(p2)
+
+
+
+
+
+if __name__ == '__main__':
+    main()

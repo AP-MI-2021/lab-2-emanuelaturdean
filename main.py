@@ -24,7 +24,7 @@ def is_prime(n):
 '''
 functia get_golbach(n) returneaza
 '''
-def get_golbach(n):
+def get_goldbach(n):
     p1=2
     while ( p1 < int(n / 2 + 1) ):
         copie=n
@@ -35,13 +35,17 @@ def get_golbach(n):
         p1 += 1
     return None
 
+def test_goldbach():
+    n = 30
+    rezultat = get_goldbach(n)
+    if rezultat is not None:
+        p1,p2 = rezultat
+        assert(p1 == 7)
+        assert(p2 == 23)
+
+
 def main():
-    print(is_prime(25))
-    return_value = get_golbach(60)
-    if return_value is not None:
-        p1,p2 = return_value
-        print(p1)
-        print(p2)
+    test_goldbach()
 
 
 

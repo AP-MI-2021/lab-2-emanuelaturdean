@@ -57,7 +57,7 @@ def cmmmc(numbers):
     return cel_mai_mic_multiplu_comun
 def citire(numbers):
     n=int(input('cate numere sunt:'))
-    for i in range(o,n):
+    for i in range(0,n):
         x=int(input())
         numbers.append(x)
 

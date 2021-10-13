@@ -42,40 +42,33 @@ def test_goldbach():
         p1,p2 = rezultat
         assert(p1 == 7)
         assert(p2 == 23)
-def get_cmmmc(numbers):
-# max va fi nr.ales ca fiind cel mai mare,initial pornind de la 0 si va deveni cea mai mare
-# valoare din lista
-    max=0
-    for x in numbers:
-        if x > max:
-            max = x
-    ok1 = 0
-    ok2 = 1
-    while ( ok1 = 0):
-        while ( ok2 = 1):
-            for x in numbers:
-                if ( max % x != 0):
-                    ok2=0
-        if (ok2 == 0):
-            max += 1
-        else:
-            ok1 = 1
-    return max
-
-
-    while (True)
-        for x in numbers:
-        if (max % x != 0):
-            break
-        max +=1
-
-    return max
+def cmmdc(a,b):
+    while b!=0:
+        r=a%b
+        a=b
+        b=r
+    return a
+def get_cmmmc(a,b)
+    return a*b / cmmdc(a,b)
+def cmmmc(numbers):
+    cel_mai_mic_multiplu_comun=numbers[0]
+    for i in range(1,len(numbers)):
+        cel_mai_mic_multiplu_comun=cmmmc(cel_mai_mic_multiplu_comun,numbers[i])
+    return cel_mai_mic_multiplu_comun
+def citire(numbers):
+    n=int(input('cate numere sunt:'))
+    for i in range(o,n):
+        x=int(input())
+        numbers.append(x)
 
 
 
 def main():
-    test_goldbach()
-    print(get_cmmmc([1,2,3]))
+
+    numbers=[]
+    citire(numbers)
+    print(get_cmmmc(numbers))
+
 
 
 

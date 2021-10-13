@@ -71,7 +71,9 @@ def citire(numbers):
     for i in range(0,n):
         x=int(input())
         numbers.append(x)
+
 def main:
+    print(is_prime(13))
     print(get_goldbach(13))
 
 if __name__ == '__main__':

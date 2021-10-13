@@ -22,7 +22,9 @@ def is_prime(n):
         return 0
 
 '''
-functia get_golbach(n) returneaza
+functia get_golbach(n)  verifica daca un numar poate fi scris ca suma de doua numere prime
+iar daca conditia ceruta este ideplinita,functia returneaza cele doua valori care alcatuiesc,adunate,numarul initial n
+in caz contrar,functia va returna valoarea None
 '''
 def get_goldbach(n):
     p1=2
@@ -34,7 +36,9 @@ def get_goldbach(n):
                 return p1,p2
         p1 += 1
     return None
-
+''''
+functia testeaza algoritmul functiei goldbach
+'''
 def test_goldbach():
     n = 30
     rezultat = get_goldbach(n)
@@ -42,15 +46,22 @@ def test_goldbach():
         p1,p2 = rezultat
         assert(p1 == 7)
         assert(p2 == 23)
+''''
+functia cmmdc realizeaza cmmdc a doua nr 
+'''
 def cmmdc(a,b):
     while b!=0:
         r=a%b
         a=b
         b=r
     return a
-def get_cmmmc(a,b):
+'''
+functia get_cmmmc se foloseste de functia cmmmc pentru a cauta cmmmc aa tuturor nr. din lista,parcurgand
+list
+'''
+def cmmmc(a,b):
     return a*b / cmmdc(a,b)
-def cmmmc(numbers):
+def get_cmmmc(numbers):
     cel_mai_mic_multiplu_comun=numbers[0]
     for i in range(1,len(numbers)):
         cel_mai_mic_multiplu_comun=cmmmc(cel_mai_mic_multiplu_comun,numbers[i])
@@ -60,9 +71,8 @@ def citire(numbers):
     for i in range(0,n):
         x=int(input())
         numbers.append(x)
-
+def main:
+    print(get_goldbach(13))
 
 if __name__ == '__main__':
-    numbers=[]
-    citire(numbers)
-    print(get_cmmmc(numbers))
+    main()

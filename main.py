@@ -48,7 +48,7 @@ def cmmdc(a,b):
         a=b
         b=r
     return a
-def get_cmmmc(a,b)
+def get_cmmmc(a,b):
     return a*b / cmmdc(a,b)
 def cmmmc(numbers):
     cel_mai_mic_multiplu_comun=numbers[0]
@@ -62,18 +62,7 @@ def citire(numbers):
         numbers.append(x)
 
 
-
-def main():
-
+if __name__ == '__main__':
     numbers=[]
     citire(numbers)
     print(get_cmmmc(numbers))
-
-
-
-
-
-
-
-if __name__ == '__main__':
-    main()

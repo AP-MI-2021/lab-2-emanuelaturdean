@@ -72,7 +72,7 @@ def citire(numbers):
         x=int(input())
         numbers.append(x)
 
-def main:
+def main():
     print(is_prime(13))
     print(get_goldbach(13))
 
